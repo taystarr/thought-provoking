@@ -1,1 +1,1 @@
-# thought-provoking
+# Thought Provoking
