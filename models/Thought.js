@@ -50,6 +50,6 @@ const ThoughtSchema = new Schema({
 });
 
 const Thought = model('Thought', ThoughtSchema);
-// const Reaction = model('Reaction', ReactionSchema);
+const Reaction = model('Reaction', ReactionSchema);
 
 module.exports = Thought;
