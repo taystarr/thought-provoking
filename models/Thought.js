@@ -17,13 +17,15 @@ const ReactionSchema = new Schema({
     username: {
         type: String,
         required: true,
-        trim: true
     },
     // createdAt- date, set defult to current timestamp
     createdAt: {
         type: Date,
         default: Date.now
     }
+},
+{
+    _id: false
 });
 
 const ThoughtSchema = new Schema({
@@ -43,7 +45,6 @@ const ThoughtSchema = new Schema({
     username: {
         type: String,
         required: true,
-        trim: true
     },
     // reactions aka replies- array of nested docs created with reactionSchema
     reactions: [ReactionSchema]
@@ -60,6 +61,7 @@ ThoughtSchema.virtual('reactionCount').get(function() {
 });
 
 const Thought = model('Thought', ThoughtSchema);
-const Reaction = model('Reaction', ReactionSchema);
+// const Reaction = model('Reaction', ReactionSchema);
 
 module.exports = Thought;
+// module.exports = Reaction;
